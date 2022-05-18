@@ -1,0 +1,133 @@
+ <h1 align="center">Welcome to Add User</h1>
+<div class="container rounded bg-dark mt-5 mb-5" style="background-image: url('https://wallpaperaccess.com/full/1385386.jpg') ;">
+  <div class="row">
+      <div class="col-md-4 border-right">
+          <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+
+            <span class="font-weight-bold"></span>
+            <span class="text-black-50"></span>
+            <span> </span></div>
+
+
+      </div>
+
+      <div class="col-md-5 border-right">
+          <div class="p-3 py-5">
+            <form [formGroup]="userForm">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <a class="text-right" style="color:mediumturquoise;" routerLink="/admin" routerLinkActive="router-link-active" >Back to Home </a>
+                <a class="text-right" style="color:mediumturquoise;" routerLink="/admin" routerLinkActive="router-link-active" >Edit profile </a>
+              </div>
+              <div class="row mt-2">
+                  <div class="col-md-6"><label class="labels" style="color:cornsilk;">User Firstname </label><input type="text" class="form-control" placeholder="Firstname" formControlName="fname">
+                  <div class="val" *ngIf="userForm.controls['fname'].invalid && (userForm.controls['fname'].dirty || userForm.controls['fname'].touched)">
+                    <div *ngIf="userForm.controls['fname'].errors?.['required']">first name is required</div>
+                  </div>
+                </div>
+                  <div class="col-md-6"><label class="labels" style="color:cornsilk;">User lastname </label><input type="text" class="form-control" placeholder="User lastname" formControlName="lname">
+                  <div class="val" *ngIf="userForm.controls['lname'].invalid && (userForm.controls['lname'].dirty || userForm.controls['lname'].touched)">
+                    <div *ngIf="userForm.controls['lname'].errors?.['required']">last name is required</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">Userphone</label><input type="text" class="form-control" placeholder="enter phone number"  formControlName=" mobile">
+                    <div class="val" *ngIf="userForm.controls[' mobile'].invalid && (userForm.controls[' mobile'].dirty || userForm.controls[' mobile'].touched)">
+                      <div *ngIf="userForm.controls[' mobile'].errors?.['required']">userphone is required</div>
+                    </div>
+                  </div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">UserEmail</label><input type="text" class="form-control" placeholder="enter Email"  formControlName=" email">
+                    <div class="val" *ngIf="userForm.controls[' email'].invalid && (userForm.controls[' email'].dirty || userForm.controls[' email'].touched)">
+                      <div *ngIf="userForm.controls['email'].errors?.['required']">Email is required</div>
+                    </div>
+                  </div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">UserAddress</label><input type="text" class="form-control" placeholder="UserAddress"  formControlName=" address">
+                    <div class="val" *ngIf="userForm.controls[' address'].invalid && (userForm.controls[' address'].dirty || userForm.controls['address'].touched)">
+                      <div *ngIf="userForm.controls['address'].errors?.['required']">useraddress is required</div>
+                    </div>
+                  </div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">UserMapaddress </label><input type="text" class="form-control" placeholder="UserMapaddress"formControlName="mapAddressLink">
+                    <div class="val" *ngIf="userForm.controls[' mapAddressLink'].invalid && (userForm.controls['mapAddressLink'].dirty || userForm.controls['mapAddressLink'].touched)">
+                      <div *ngIf="userForm.controls['mapAddressLink'].errors?.['required']">usermap address is required</div>
+                    </div>
+                  </div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">User-Username</label><input type="text" class="form-control" placeholder="User-Username" formControlName="user_name">
+                    <div class="val" *ngIf="userForm.controls['user_name'].invalid && (userForm.controls['user_name'].dirty || userForm.controls['user_name'].touched)">
+                      <div *ngIf="userForm.controls['user_name'].errors?.['required']">user name is required</div>
+                    </div>
+                  </div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">password</label><input type="text" class="form-control" placeholder="password"formControlName=" user_pass" >
+                    <div class="val" *ngIf="userForm.controls['user_pass'].invalid && (userForm.controls['user_pass'].dirty || userForm.controls['user_pass'].touched)">
+                      <div *ngIf="userForm.controls['user_pass'].errors?.['required']">password is required</div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="col-md-6" >
+
+
+                    <label style="color:white" >Is Admin</label>
+                    <select class="form-select"style="margin-right: 50px;" formControlName="IsAdmin">
+                      <div class="val" *ngIf="userForm.controls['IsAdmin'].invalid && (userForm.controls['IsAdmin'].dirty || userForm.controls['IsAdmin'].touched)">
+                        <div *ngIf="userForm.controls['IsAdmin'].errors?.['required']">password is required</div>
+                      </div>
+
+
+
+                      <option  value=" disabled selected hidden">IsAdmin </option>
+                      <option>A</option>
+                      <option>U</option>
+
+                      </select>
+                    </div>
+
+
+
+<div class="col-md-6"  formControlName="Type">
+  <label  style="color:white"  >User Type</label>
+
+  <select class="form-select"style="margin-right: 50px;">
+    <div class="val" *ngIf="userForm.controls['Type'].invalid && (userForm.controls['Type'].dirty || userForm.controls['Type'].touched)">
+      <div *ngIf="userForm.controls['Type'].errors?.['required']">password is required</div>
+    </div>
+
+
+
+    <option>Admin</option>
+    <option>User</option>
+
+    </select>
+  </div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">Userprofileimage</label><input type="text" class="form-control" placeholder="Userprofileimage" formControlName=" user_Profileimage">
+                    <div class="val" *ngIf="userForm.controls['user_Profileimage'].invalid && (userForm.controls['user_Profileimage'].dirty || userForm.controls['user_Profileimage'].touched)">
+                      <div *ngIf="userForm.controls['user_pass'].errors?.['required']">password is required</div>
+                    </div>
+                  </div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">User Isadmin</label><input type="text" class="form-control" placeholder="User Isadmin"  formControlName=" isAdmin">
+                    <div class="val" *ngIf="userForm.controls['isAdmin'].invalid && (userForm.controls['isAdmin'].dirty || userForm.controls['isAdmin'].touched)">
+                      <div *ngIf="userForm.controls['isAdmin'].errors?.['required']">password is required</div>
+                    </div>
+                  </div>
+              </div>
+              <div class="row mt-3">
+                  <div class="col-md-6" style="color:cornsilk;"><label class="labels">User-type</label><input type="text" class="form-control" placeholder="User-type" formControlName=" type">
+                    <div class="val" *ngIf="userForm.controls['isAdmin'].invalid && (userForm.controls['isAdmin'].dirty || userForm.controls['isAdmin'].touched)">
+                      <div *ngIf="userForm.controls['isAdmin'].errors?.['required']">password is required</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6" style="color:cornsilk;"><label class="labels">User-Role</label><input type="text" class="form-control"  placeholder="User-Role" formControlName=" user_status">
+                    <div class="val" *ngIf="userForm.controls[' user_status'].invalid && (userForm.controls[' user_status'].dirty || userForm.controls[' user_status'].touched)">
+                      <div *ngIf="userForm.controls[' user_status'].errors?.['required']">password is required</div>
+                    </div>
+                  </div>
+              </div>
+              <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button"   routerlink="/admin" (click)="SaveUser()">Save Profile</button></div>
+</form>>
+            </div>
+      </div>
+
+      </div>
+  </div>
+

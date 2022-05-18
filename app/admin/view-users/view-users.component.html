@@ -1,0 +1,40 @@
+
+<body class="img">
+  <h1 style="text-align: center ">USER TOTAL LIST</h1>
+
+  <table class="table table-secondary"  style="background-color:lightslategray ;">
+    <thead>
+      <tr>
+        <th scope="col">User_id</th>
+        <th scope="col">User_FirstName </th>
+        <th scope="col">User_LastName</th>
+        <th scope="col">User_Email</th>
+        <th scope="col">User_Address </th>
+        <th scope="col">User_Status</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+  <tbody>
+      <tr *ngFor="let item of vam | paginate: { itemsPerPage: 10, currentPage: p }">
+
+        <td>{{item.user_Id}}</td>
+        <td>{{item.user_Firstname}}</td>
+        <td>{{item.user_Lastname}}</td>
+        <td>{{item.user_Phone}}</td>
+        <td>{{item.user_Email}}</td>
+        <td>{{item.user_Address}}</td>
+
+        <td>
+          <button type="button" class="btn btn-outline-danger" routerLink="/app-editusers">Edit</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-outline-info">Delete </button>
+       </td>
+    </tr>
+  </tbody>
+
+  </table>
+  <pagination-controls (pageChange)="p = $event"  class="pclass" ></pagination-controls>
+  </body>
+

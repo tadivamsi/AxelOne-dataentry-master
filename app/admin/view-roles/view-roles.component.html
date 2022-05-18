@@ -1,0 +1,36 @@
+<body  class="img">
+<h1 style="text-align: center ;color:white">VIEW TOTAL ROLES</h1>
+<table class="table" style="margin-top: 60px ;background-color: white;">
+ <thead>
+    <tr>
+      <th scope="col">Role_id</th>
+      <th scope="col">Role_FirstName </th>
+
+      <th scope="col">Role_Uniqid</th>
+      <th scope="col">Role_Type </th>
+      <th scope="col">Role_Status</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of Role">
+
+      <td>{{x.role_Id}}</td>
+      <td>{{x. role_Name}}</td>
+      <td>{{x.role_Uniqid}}</td>
+      <td>{{x.role_Type}}</td>
+      <td>{{x.role_Status}}</td>
+
+      <td>
+        <button type="button" class="btn btn-primary" routerLink="/app-editusers/">Edit</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-info">Delete </button>
+     </td>
+    </tr>
+
+
+</table>
+
+</body>

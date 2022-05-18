@@ -1,0 +1,12 @@
+.img
+{
+  background-image: url('https://wallpaperaccess.com/full/1385386.jpg');
+  background-size: cover;
+  height: 800px;
+}
+
+.pclass
+{
+  color: rgb(255, 255, 255);
+  text-align: center;
+}

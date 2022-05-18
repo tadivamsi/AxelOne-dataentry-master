@@ -1,0 +1,71 @@
+<h1 align="center">Welcome to Edit Users (user)</h1>
+<div class="container rounded bg-dark mt-5 mb-5" style="background-image: url('https://wallpaperaccess.com/full/1385386.jpg'); ">
+
+  <div class="row" >
+      <div class="col-md-4 border-right">
+          <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+
+            <span class="font-weight-bold"></span>
+            <span class="text-black-50"></span>
+            <span> </span></div>
+
+
+      </div>
+      <div class="col-md-5 border-right">
+          <div class="p-3 py-5">
+            <form [formGroup]="userForm">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <a class="text-right" style="color:mediumturquoise;" routerLink="/admin" routerLinkActive="router-link-active" >Back to Home </a>
+                <a class="text-right" style="color:mediumturquoise;" routerLink="/admin" routerLinkActive="router-link-active" >Edit profile </a>
+              </div>
+
+              <div class="row mt-2">
+                  <div class="col-md-6"><label class="labels" style="color:cornsilk;">User Firstname</label><input type="text" class="form-control" placeholder="Firstname"></div>
+                  <div class="col-md-6"><label class="labels" style="color:cornsilk;">User lastname </label><input type="text" class="form-control" ></div>
+              </div>
+              <div class="row mt-3">
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">Userphone</label><input type="text" class="form-control" placeholder="enter phone number"></div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">UserEmail</label><input type="text" class="form-control" placeholder="enter Email"></div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">UserAddress</label><input type="text" class="form-control" placeholder="UserAddress"></div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">UserMapaddress </label><input type="text" class="form-control" placeholder="UserMapaddress" ></div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">User-Username</label><input type="text" class="form-control" placeholder="User-Username"></div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">password</label><input type="text" class="form-control" placeholder="password" ></div>
+
+
+                  <div class="col-md-6" >
+                    <label style="color: white;">Is Admin</label>
+                    <select class="form-select"style="margin-right: 50px;">
+
+                      <option>A</option>
+                      <option>U</option>
+
+                      </select>
+                    </div>
+
+<div class="col-md-6" >
+  <label style="color: white;">user Type</label>
+  <select class="form-select"style="margin-right: 50px;">
+
+    <option>Admin</option>
+    <option>User</option>
+
+    </select>
+  </div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">Userprofileimage</label><input type="text" class="form-control" placeholder="Userprofileimage" ></div>
+                  <div class="col-md-12"><label class="labels" style="color:cornsilk;">User Isadmin</label><input type="text" class="form-control" placeholder="User Isadmin" ></div>
+              </div>
+              <div class="row mt-3">
+                  <div class="col-md-6" style="color:cornsilk;"><label class="labels">User-type</label><input type="text" class="form-control" placeholder="User-type" ></div>
+                  <div class="col-md-6" style="color:cornsilk;"><label class="labels">User-Role</label><input type="text" class="form-control"  placeholder="User-Role"></div>
+              </div>
+              <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button" routerLink="/admin" routerLinkActive="router-link-active"  >Save Profile</button></div>
+             </form>
+
+
+      </div>
+
+      </div>
+  </div>
+
+</div>
+

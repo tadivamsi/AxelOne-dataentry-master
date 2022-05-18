@@ -1,0 +1,53 @@
+
+<body  class="bclass">
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AxelOne</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+
+          <li class="nav-item dropdown" *ngIf="role!='user'">
+            <a class="nav-link dropdown-toggle" href="/admin" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Admin
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"  style="background-color:linen">
+              <li><a class="dropdown-item" href="/admin/app-add-role">Add Role</a></li>
+              <li><a class="dropdown-item" href="/admin/app-add-user">Add Users</a></li>
+              <li><a class="dropdown-item" href="/admin/app-view-roles">View Roles </a></li>
+              <li><a class="dropdown-item" href="/admin/app-view-users">View Users </a></li>
+              <li><a class="dropdown-item" href="/admin/app-editusers">Edit Details </a></li>
+
+              
+              <li><a class="dropdown-item" href="/admin/app-edituser">Edit users </a></li>
+            </ul>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/admin/user-details">User Edit Details </a>
+          </li> -->
+
+
+
+             <li class="nav-item dropdown"  style="margin-left: 1000px;">
+            <a class="nav-link dropdown-toggle" href="/admin" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"  style="background-color:linen">
+              <li><a class="dropdown-item" routerLink="/login">logout</a></li>
+
+            </ul>
+          </li>
+            </ul>
+
+
+
+
+      </div>
+    </div>
+  </nav>
+</body>
